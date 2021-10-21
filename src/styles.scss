@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+header {
+    background-color: #4b71cb;
+}
+body {
+    background-color: #8b9b34;
+}
+h1 {
+    margin-top: 4px;
+}
+h2 {
+    margin-top: 4px;
+}
+img {
+    border-radius: 8px;
+}
+
+.text-block {
+    background-color: white;
+    padding: 4px;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.container {
+    margin-left: 30px;
+    margin-right: 30px;
+}

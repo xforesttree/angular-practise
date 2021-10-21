@@ -1,0 +1,10 @@
+<header>
+    <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png">
+    <nav class="container">
+      <ul class="nav nav-tabs">
+        <li *ngFor="let link of links" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]="link.url">{{link.label}}</a>
+        </li>
+      </ul>
+    </nav>
+  </header>

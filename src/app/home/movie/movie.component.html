@@ -1,0 +1,9 @@
+<section *ngIf="!!selectedMovie" class="container-fluid">
+    <div class="text-block">
+        <h2>{{selectedMovie.name}}</h2>
+    </div>
+    <img *ngIf="!!selectedMovie.imageUrl" class="img-responsive" [src]="selectedMovie.imageUrl">
+    <div class="text-block">
+        <p>{{selectedMovie.description}}</p>
+    </div>
+</section>

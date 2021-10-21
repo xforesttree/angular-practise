@@ -1,0 +1,12 @@
+<section class="container-fluid">
+  <div class="text-block">
+    <h1>Welcome</h1>
+    <p>This is a fansite to the popular studio Ghibili films. If you're here you're probably a fan too. If you ever wanted to learn more about any of the films this is the place to be!</p>
+    <p>What movie would you like to know more about?</p>
+  </div>
+  <select #movieSelect [(ngModel)]="selectedMovieId" class="form-control" (change)="onSelectMovie(movieSelect)">
+    <option *ngFor="let movie of movies" [value]="movie.id">
+      {{movie.name}}
+    </option>
+  </select>
+</section>
