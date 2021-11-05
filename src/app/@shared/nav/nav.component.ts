@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Link } from '../types';
-import { links } from '../constants';
+import { Link } from '../../types';
+import { links } from '../../constants';
 
 @Component({
   selector: 'nav-component',

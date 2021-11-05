@@ -5,5 +5,6 @@
     <img *ngIf="!!selectedMovie.imageUrl" class="img-responsive" [src]="selectedMovie.imageUrl">
     <div class="text-block">
         <p>{{selectedMovie.description}}</p>
+        <button type="button" class="btn btn-default" (click)="onClick()">Read more</button>
     </div>
 </section>

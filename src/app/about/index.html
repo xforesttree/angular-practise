@@ -2,6 +2,12 @@
     <div class="col-xs-12">
          <div class="text-block">
             <p>Idk man, this page is only about having a working router + nav</p>
+            <button *ngFor="let movie of movies" type="button" class="btn btn-default" (click)="onClick(movie.id)">Read more about {{movie.name}}</button>
         </div>  
     </div>  
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <router-outlet></router-outlet>
+    </div>
 </div>

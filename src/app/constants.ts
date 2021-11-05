@@ -9,8 +9,13 @@ const movies: Movie[] = [
     new Movie(
         "2", 
         'Howl\'s moving castle',
-        'Bisexuals love this',
-        'https://wallpaperaccess.com/full/2126719.jpg')
+        'Bisexuals love this, is it the hair or the respect for boundries?',
+        'https://wallpaperaccess.com/full/2126719.jpg'),
+    new Movie(
+        "3", 
+        'Ponyo',
+        'For every movie they change how they animate water to reflect the feelings it\'s supposed to evoke',
+        'https://studioghiblimovies.com/wp-content/uploads/2018/11/ponyo32.jpg')
 ]
 
 const links: Link[] = [

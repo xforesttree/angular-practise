@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { MovieService } from '../../services';
+
 import { Movie } from 'src/app/types';
 
 @Component({
@@ -10,9 +13,13 @@ import { Movie } from 'src/app/types';
 export class MovieComponent implements OnInit {
   selectedMovie?: Movie;
 
-  constructor(private movieService: MovieService) {}
+  constructor(private movieService: MovieService, private router: Router,) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.movieService.newMovieSelected.subscribe((movie) => {this.selectedMovie = movie})
+  }
+
+  onClick() {
+    this.router.navigate(['about', this.selectedMovie.id])
   }
 }

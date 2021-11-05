@@ -8,7 +8,7 @@ import { HomeModule } from './home/index.module';
 import { AboutModule } from './about/index.module';
 
 import { AppComponent } from './app.component';
-import { Nav } from './nav/nav.component';
+import { Nav } from './@shared/nav/nav.component';
 
 @NgModule({
   declarations: [
