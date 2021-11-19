@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HomeModule } from './home/index.module';
 import { AboutModule } from './about/index.module';
+import { SignUpModule } from './sign-up/index.module';
 
 import { AppComponent } from './app.component';
 import { Nav } from './@shared/nav/nav.component';
@@ -18,6 +19,7 @@ import { Nav } from './@shared/nav/nav.component';
   imports: [
     HomeModule,
     AboutModule,
+    SignUpModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule

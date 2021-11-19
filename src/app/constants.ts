@@ -20,7 +20,17 @@ const movies: Movie[] = [
 
 const links: Link[] = [
     new Link('/', 'home'),
-    new Link('/about', 'about')
+    new Link('/about', 'about'),
+    new Link('/sign-up', 'sign up')
 ]
 
-export { movies, links }
+const pronouns: string[] = [
+    "They/Them",
+    "He/Him",
+    "She/Her",
+    "They/He",
+    "She/They",
+    "It/Its"
+]
+
+export { movies, links, pronouns }

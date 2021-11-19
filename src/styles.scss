@@ -2,15 +2,15 @@
 header {
     background-color: #4b71cb;
 }
+
 body {
     background-color: #8b9b34;
 }
-h1 {
+
+h1, h2, h3 {
     margin-top: 4px;
 }
-h2 {
-    margin-top: 4px;
-}
+
 img {
     border-radius: 8px;
 }
@@ -25,4 +25,12 @@ img {
 .container {
     margin-left: 30px;
     margin-right: 30px;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.validation-error {
+    color: red;
 }
