@@ -1,0 +1,126 @@
+<form [formGroup]="form" (ngSubmit)="onSubmitV2()">
+    <div formGroupName="userInfo">
+        <div class="form-group">
+            <label>Name *</label>
+            <input
+            id="name"
+            formControlName="name"
+            type="text"
+            class="form-control"
+            >
+            <span
+            *ngIf="form.get('userInfo.name').touched && form.get('userInfo.name').invalid"
+            class="validation-error"
+            >
+                Please enter a name
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Pronouns</label>
+            <select
+            id="pronouns"
+            formControlName="pronouns"
+            class="form-control"
+            >
+                <option *ngFor="let p of pronouns" [value]="p">{{p}}</option>
+            </select>
+            <span *ngIf="form.get('userInfo.pronouns').pristine">
+                If you choose not to specify we will adress you as <i>{{defaultAdress}}</i>
+            </span>
+        </div>
+        <div *ngIf="form.get('userInfo.pronouns').dirty" class="form-group">
+            <label>How would you like to be adressed?</label>
+            <select
+            id="adress"
+            formControlName="adress"
+            class="form-control"
+            >
+                <option value="Sir">
+                    Sir {{form.get('userInfo.name').value}}
+                </option>
+                <option value="Ms">
+                    Mrs {{form.get('userInfo.name').value}}
+                </option>
+                <option value="Mrs">
+                    Mrs {{form.get('userInfo.name').value}}
+                </option>
+                <option value="Miss">
+                    Miss {{form.get('userInfo.name').value}}
+                </option>
+                <option value="Dear">
+                    Dear {{form.get('userInfo.name').value}}
+                </option>
+                <option value="Dear fan">
+                    Dear fan
+                </option>
+            </select>
+        </div>
+    </div>
+    <div formGroupName="contactInfo">
+        <div class="form-group">
+            <label>Email *</label>
+            <input
+            id="email"
+            formControlName="email"
+            type="email"
+            class="form-control"
+            >
+            <span
+            *ngIf="form.get('contactInfo.email').touched && form.get('contactInfo.email').invalid"
+            class="validation-error"
+            >
+                Please enter a valid email
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div id="raffle" class="form-group">
+        <label>Enter our monthly raffle?</label>
+        <div class="radio">
+            <label class="mr-2">
+                <input
+                [value]="true"
+                formControlName="raffle"
+                type="radio"
+                >
+                Yes
+            </label>
+            <label>
+                <input
+                [value]="false"
+                formControlName="raffle"
+                type="radio"
+                >
+                No
+            </label>
+        </div>
+    </div>
+    <div id="favouriteMovies" class="form-group" formArrayName="favouriteMovies">
+        <label>Customise your newletter by adding your favourite movies</label>
+        <div *ngFor="let control of getControls(); let i = index">
+            <label class="mt-2">Favourite Movie no.{{i + 1}}</label>
+            <select class="form-control" [formControlName]="i">
+                <option *ngFor="let movie of movies" [value]="movie.id">{{movie.name}}</option>
+            </select>
+            <span *ngIf="form.get('favouriteMovies').invalid">Poof</span>
+        </div>
+        <div class="flex-center mt-2">
+            <button
+            type="button"
+            (click)="onAddFavouriteMovie()"
+            class="btn btn-secondary"
+            >
+                Add a movie
+            </button>
+        </div>
+    </div>
+    <div class="flex-end">
+        <button
+        [disabled]="form.invalid"
+        type="submit"
+        class="btn btn-primary"
+        >
+            Sign up
+        </button>
+    </div>
+</form>
