@@ -3,7 +3,7 @@
     <nav class="container">
       <ul class="nav nav-tabs">
         <li *ngFor="let link of links" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.url === '/' }">
-          <a [routerLink]="link.url">{{link.label}}</a>
+          <a [routerLink]="link.url">{{link.label | titlecase}}</a>
         </li>
       </ul>
     </nav>

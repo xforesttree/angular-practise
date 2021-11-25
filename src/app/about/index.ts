@@ -9,6 +9,7 @@ import { movies } from '../constants';
   templateUrl: './index.html',
 })
 export class About {
+  filter: string;
   movies: Movie[] = movies;
 
   constructor(private router: Router, private route: ActivatedRoute) {}

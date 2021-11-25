@@ -3,21 +3,7 @@
         <div class="text-block">
             <h2>Techniques used</h2> 
             <ul>
-                <li>Property binding</li>
-                <li>Hooks</li>
-                <li>(custom) Event binding</li>
-                <li>String interpolation</li>
-                <li>Local references</li>
-                <li>(custom) Props</li>
-                <li>Angular equivalant of map</li>
-                <li>Conditional rendering</li>
-                <li>Services</li>
-                <li>Directives</li>
-                <li>(nested) Routing</li>
-                <li>Template Form (validation)</li>
-                <li>Reactive Form (validation)</li>
-                <li>Generated inputs on UI</li>
-                <li>Custom validation</li>
+                <li *ngFor="let tech of techniques">{{tech}}</li>
             </ul>
         </div>
     </div>

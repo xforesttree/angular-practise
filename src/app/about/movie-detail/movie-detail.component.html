@@ -1,3 +1,13 @@
 <div class="text-block">
-    <p>congratz this is a childRoute for {{currentMovie.name}}</p>
+    <h2>Everything there is to know about {{currentMovie.name}}</h2>
+</div>
+<img *ngIf="!!currentMovie.imageUrl" class="img-responsive" [src]="currentMovie.imageUrl">
+<div class="text-block">
+    <ul class="no-bullets">
+        <li *ngIf="!!currentMovie.releaseDate"><strong>Release date: </strong>{{currentMovie.releaseDate | date:'longDate'}}</li>
+        <li *ngIf="!!currentMovie.writtenBy"><strong>Written by: </strong>{{currentMovie.writtenBy}}</li>
+        <li *ngIf="!!currentMovie.budget"><strong>Budget: </strong>{{currentMovie.budget}}</li>
+        <li *ngIf="!!currentMovie.boxOffice"><strong>Box office: </strong>{{currentMovie.boxOffice}}</li>
+    </ul>
+    <p *ngIf="!!currentMovie.description">{{currentMovie.description}}</p>
 </div>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { FormV1 } from './formv1.component';
 import { FormV2 } from './formv2.component';
@@ -14,9 +14,9 @@ import { SignUp } from './index';
     FormV2
   ],
   imports: [
-    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonModule
   ],
   exports: [
       SignUp

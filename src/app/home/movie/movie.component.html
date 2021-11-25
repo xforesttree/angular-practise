@@ -4,7 +4,7 @@
     </div>
     <img *ngIf="!!selectedMovie.imageUrl" class="img-responsive" [src]="selectedMovie.imageUrl">
     <div class="text-block">
-        <p>{{selectedMovie.description}}</p>
-        <button type="button" class="btn btn-default" (click)="onClick()">Read more</button>
+        <p *ngIf="!!selectedMovie.description">{{selectedMovie.description | elipse: 50}}</p>
+        <button type="button" class="btn btn-default" (click)="onClick()">Learn more</button>
     </div>
 </section>

@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { Home } from './index';
 import { Intro } from './intro/intro.component';
 import { MovieComponent } from './movie/movie.component';
 import { MovieService } from '../services';
+import { ElipsePipe } from './../pipes';
 
 @NgModule({
   declarations: [
     Home,
     Intro,
     MovieComponent,
+    ElipsePipe
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule
   ],
   exports: [

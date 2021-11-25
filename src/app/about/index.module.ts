@@ -1,23 +1,28 @@
 import { NgModule } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 
 import { MovieService } from '../services';
 import { About } from './index';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { FilterPipe } from '../pipes';
 
 @NgModule({
   declarations: [
-    About
+    About,
+    MovieDetailComponent,
+    FilterPipe
   ],
   imports: [
-    BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   exports: [
-      About
+      About,
+      MovieDetailComponent
   ],
   providers: [MovieService],
 })

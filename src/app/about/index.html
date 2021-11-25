@@ -1,8 +1,16 @@
 <div class="row">
     <div class="col-xs-12">
          <div class="text-block">
-            <p>Idk man, this page is only about having a working router + nav</p>
-            <button *ngFor="let movie of movies" type="button" class="btn btn-default" (click)="onClick(movie.id)">Read more about {{movie.name}}</button>
+            <p>Or read more about...</p>
+            <input class="form-control" type="text" [(ngModel)]="filter">
+            <button
+            *ngFor="let movie of movies | filter:filter:'name'"
+            (click)="onClick(movie.id)"
+            type="button"
+            class="btn btn-default mr-2 mt-2"
+            >
+                {{movie.name | titlecase}}
+            </button>
         </div>  
     </div>  
 </div>
